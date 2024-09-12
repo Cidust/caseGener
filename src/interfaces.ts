@@ -16,3 +16,13 @@ export interface ListItem {
   composition: string;
   medicalAdvice: string;
 }
+
+export interface BackEndMist {
+  mist: string;
+  key: number;
+}
+
+export interface MistData {
+  mist: string;
+  ans: string;
+}
