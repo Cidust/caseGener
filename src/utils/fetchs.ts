@@ -7,11 +7,14 @@ export const HTTP = (
   const allURL = URL + path;
   const options: RequestInit = {};
 
+  options.mode = "cors";
+
+  options.headers = {
+    "Content-Type": "application/json",
+  };
+
   if (content && method !== "GET") {
     options.body = JSON.stringify(content);
-    options.headers = {
-      "Content-Type": "application/json",
-    };
     options.method = method;
   }
 
@@ -20,5 +23,7 @@ export const HTTP = (
 
 export const HTTP_VERTIF = (path: string, token?: string) => {
   const allURL = URL + path;
-  return fetch(allURL, { headers: { Authorization: `Bearer ${token}` } });
+  return fetch(allURL, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
 };

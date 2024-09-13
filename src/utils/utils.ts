@@ -1,4 +1,7 @@
-export const URL = "http://localhost:7461";
+// export const URL = "http://localhost:7461";
+// export const URL = "https://localhost:3000";
+// export const URL = "http://118.25.138.233:7461";
+export const URL = "https://api.cidust.top";
 
 export const mist = [
   [0x6b62, 0x6208],
